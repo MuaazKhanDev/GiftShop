@@ -1,0 +1,46 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Orange Wide Leg",
+      "price": "980,00€",
+      "description": "This one-piece swimsuit is crafted from jersey featuring an allover micro Monogram motif in relief.",
+      "img_url": "/images/box1.png"
+    },
+    {
+      "id": 2,
+      "name": "Tailored Jacket",
+      "price": "980,00€",
+      "description": "This one-piece swimsuit is crafted from jersey featuring an allover micro Monogram motif in relief.",
+      "img_url": "/images/box2.png"
+    },
+    {
+      "id": 3,
+      "name": "Accordion Pleated Dress",
+      "price": "980,00€",
+      "description": "This one-piece swimsuit is crafted from jersey featuring an allover micro Monogram motif in relief.",
+      "img_url": "/images/box3.png"
+    },
+    {
+      "id": 4,
+      "name": "Green Trench Coat",
+      "price": "980,00€",
+      "description": "This one-piece swimsuit is crafted from jersey featuring an allover micro Monogram motif in relief.",
+      "img_url": "/images/box4.png"
+    },
+    {
+      "id": 5,
+      "name": "Tennis Blue T-Shirt",
+      "price": "980,00€",
+      "description": "This one-piece swimsuit is crafted from jersey featuring an allover micro Monogram motif in relief.",
+      "img_url": "/images/box5.png"
+    },
+    {
+      "id": 6,
+      "name": "Long Sleeve Tennis Top",
+      "price": "980,00€",
+      "description": "This one-piece swimsuit is crafted from jersey featuring an allover micro Monogram motif in relief.",
+      "img_url": "/images/box6.png"
+    }
+  ]
+}
