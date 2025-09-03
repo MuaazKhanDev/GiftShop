@@ -21,6 +21,7 @@ header {
   text-align: center;
   justify-content: space-between;
 }
+
 .header {
   height: 70px;
 }
@@ -36,7 +37,9 @@ header {
   display: flex;
   align-items: center;
 }
-.btn-1, .btn-2 {
+
+.btn-1,
+.btn-2 {
   height: 40px;
   display: flex;
   align-items: center;
@@ -49,12 +52,19 @@ header {
   cursor: pointer;
   transition: 0.3s;
 }
+
 .arrow {
   margin-top: 1px;
 }
 
 .btn-1:hover {
   background-color: #fff;
+  border: 1px solid black;
+}
+
+.btn-2:hover {
+  background-color: #fff;
+  color: black;
 }
 
 /* ---------------- HERO IMAGE ---------------- */
@@ -110,7 +120,6 @@ header {
   transition: 0.3s;
 }
 
-.btn-2:hover,
 .btn-02:hover {
   background-color: #f5f5f5;
   color: black;
@@ -122,15 +131,17 @@ header {
   position: relative;
 }
 
-.btn-02{
+.btn-02 {
   position: absolute;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
 }
+
 .arrow2 {
   margin-top: 2px;
 }
+
 /* ---------------- FOOTER ---------------- */
 footer {
   display: flex;
@@ -161,7 +172,7 @@ footer {
 }
 
 .imgbox {
-  position: relative;  /* keep addicon inside */
+  position: relative;
   display: inline-block;
   flex: 1 1 100%;
   max-width: 300px;
@@ -178,7 +189,7 @@ footer {
 
 .addicon {
   position: absolute;
-  top: 50px;   
+  top: 50px;
   right: 35px;
   cursor: pointer;
   width: 35px;
@@ -218,7 +229,7 @@ footer {
   flex-direction: column;
   align-items: center;
   overflow: hidden;
-  box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
 }
 
 .closeicon {
@@ -260,14 +271,14 @@ footer {
   margin: 15px 0px 0px 0px;
   font-family: Jost;
   font-weight: 300;
-  font-size: 16px; 
+  font-size: 16px;
 }
 
 .price {
   margin: 15px 0px 0px 0px;
   font-family: Lustria;
   font-weight: 400;
-  font-size: 16px; 
+  font-size: 16px;
 }
 
 .description {
@@ -294,7 +305,7 @@ footer {
   display: flex;
   align-items: center;
   border: 0.5px solid black;
-  width: 271px; 
+  width: 271px;
   height: 40px;
   margin-top: 10px;
 }
@@ -305,7 +316,8 @@ footer {
   height: 100%;
   border: 0.5px solid black;
 }
-.color1{
+
+.color1 {
   width: 5px;
   background-color: black;
   height: 100%;
@@ -327,7 +339,7 @@ footer {
 
 .sizechoice {
   position: relative;
-  width: 271px; 
+  width: 271px;
   height: 40px;
 }
 
@@ -344,7 +356,7 @@ footer {
   background-size: 16px;
 }
 
-.btncart { 
+.btncart {
   background-color: rgb(0, 0, 0);
   color: white;
   border: none;
@@ -357,12 +369,12 @@ footer {
   height: 45px;
   font-family: Jost;
   font-weight: 400;
-  font-size: 16px; 
+  font-size: 16px;
   text-transform: uppercase;
   margin-top: 25px;
 }
 
-.page1sec4 { 
+.page1sec4 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -377,8 +389,60 @@ footer {
 .discoverline {
   display: none;
 }
+
 .hamburger {
   display: none;
+}
+
+.mobile-dropdown {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
+}
+
+.mobile-dropdown.show {
+  display: flex;
+}
+
+.mobile-dropdown .btn-1,
+#btnbox .btn-1 {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.mobile-dropdown .btn-1:hover,
+#btnbox .btn-1:hover {
+  background: #333;
+  transform: scale(1.05);
+}
+
+.mobile-dropdown p {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.mobile-dropdown .btn-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: yellow;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
 }
 
 /* ---------------- RESPONSIVENESS ---------------- */
@@ -419,16 +483,18 @@ footer {
   .section2 {
     padding: 0px;
   }
-  .section3 img{
+
+  .section3 img {
     width: 100%;
   }
+
   .section3 button {
-    display: flex;            
-    align-items: center;      
-    justify-content: center; 
-    gap: 5px;                 
-    height: 40px;           
-    width: 150px;          
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    height: 40px;
+    width: 150px;
   }
 
   .discoverline {
@@ -451,7 +517,7 @@ footer {
   .imgbox {
     flex: 1 1 calc(50% - 10px);
     max-width: calc(50% - 10px);
-    height: 180px;  
+    height: 180px;
   }
 
   .addicon {
@@ -517,15 +583,26 @@ footer {
   .btn-02 {
     bottom: 30px;
   }
+
   .page1sec1 {
     display: -webkit-inline-box;
     padding-right: 30px;
   }
-  .page1{
+
+  .page1 {
     height: 450px;
   }
-  .btncart{
+
+  .btncart {
     margin-top: 30px;
+  }
+
+  .mobile-dropdown {
+    display: none;
+  }
+
+  .mobile-dropdown.show {
+    display: flex;
   }
 }
 
@@ -561,7 +638,8 @@ footer {
     padding: 20px;
   }
 
-  .part1, .part2 {
+  .part1,
+  .part2 {
     flex: unset;
     width: 100%;
     text-align: center;

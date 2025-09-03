@@ -6,41 +6,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Tisso Vision - Gift Guide</title>
-  <meta name="description" content="Tisso Vision - Discover the ultimate holiday gift guide. Find sustainable, ethically made gifts for your loved ones.">
+  <meta name="description"
+    content="Tisso Vision - Discover the ultimate holiday gift guide. Find sustainable, ethically made gifts for your loved ones.">
   <link rel="icon" type="image/png" href="/images/favicon3.jpg">
 
   <link rel="stylesheet" href="index.css">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
-        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap" rel="stylesheet">
 
   <meta property="og:title" content="Tisso Vision - Gift Guide">
-  <meta property="og:description" content="Discover the ultimate holiday gift guide. Find sustainable, ethically made gifts for your loved ones.">
+  <meta property="og:description"
+    content="Discover the ultimate holiday gift guide. Find sustainable, ethically made gifts for your loved ones.">
   <meta property="og:image" content="favicon2.jpg">
   <meta property="og:url" content="https://yourwebsite.com">
   <meta property="og:type" content="website">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Tisso Vision - Gift Guide">
-  <meta name="twitter:description" content="Discover the ultimate holiday gift guide. Find sustainable, ethically made gifts for your loved ones.">
+  <meta name="twitter:description"
+    content="Discover the ultimate holiday gift guide. Find sustainable, ethically made gifts for your loved ones.">
   <meta name="twitter:image" content="favicon2.jpg">
 </head>
 
 
 <body>
   <header class="header">
-    <div class="hamburger"><img src="/images/hamBurger.svg" alt=""></div>
+    <div class="hamburger"><img src="/images/hamBurger.svg" alt="">
+      <img src="/images/closeicon.svg" alt="close" class="close-icon" style="display:none;">
+    </div>
     <div class="box" id="logo"> <img src="/images/Logo.png" alt=""></div>
     <div class="box" id="midline">Find the ideal gift for your loved ones.</div>
     <div class="box" id="btnbox">
-      <button class="btn-1">CHOOSE GIFT 
+      <button class="btn-1">CHOOSE GIFT
         <div class="arrow"><img class="arrow" src="/images/Arrow 1.svg" alt=""></div>
       </button>
     </div>
   </header>
+
+  <!-- Mobile Dropdown -->
+  <div class="mobile-dropdown">
+    <p id="dropdown-line">Find the ideal gift for your loved ones.</p>
+    <button class="btn-1">CHOOSE GIFT
+      <div class="arrow"><img class="arrow" src="/images/Arrow 1.svg" alt=""></div>
+    </button>
+  </div>
 
   <div class="section1">
     <img class="img-1" src="/images/img01.jpg" alt="Banner">
@@ -51,7 +64,7 @@
       <p class="heading">The Gift Guide</p>
       <p class="content">Discover Joy: Your Ultimate Holiday Gift Destination. <br> Explore our curated selection and
         find the perfect gifts to <br> delight your loved ones this holiday season.</p>
-      <button class="btn-2">Shop Now 
+      <button class="btn-2">Shop Now
         <div class="arrow2"><img class="arrow" src="/images/ArrowWhite.svg" alt="">
       </button>
     </div>
@@ -115,64 +128,15 @@
     </div>
     <div class="page1sec4">
       <button class="btncart">
-        Add to Cart 
+        Add to Cart
         <img class="arrow" src="/images/ArrowWhite.svg" alt="" style="margin-left: 10px;">
       </button>
     </div>
   </div>
 
-  <script>
-    fetch("products.json")
-      .then(response => response.json())
-      .then(data => {
-        const container = document.getElementById("product-list");
+  <script src="index.js">
 
-        // Render products
-        data.products.forEach((product, index) => {
-          let productBox = document.createElement("div");
-          productBox.classList.add("imgbox");
-
-          productBox.innerHTML = `
-            <img class="imgboximg" src="${product.img_url}" alt="${product.name}">
-            <button class="addicon" data-index="${index}">
-                <img src="/images/Addicon.svg" alt="" style="width: 20px; height: 15px;">
-            </button>
-          `;
-          container.appendChild(productBox);
-        });  
-
-        const modal = document.querySelector(".page1");
-        const closeBtn = document.querySelector(".closeicon");
-        const modalImg = document.querySelector(".page1-img img");
-        const modalName = document.querySelector(".page1content .name");
-        const modalPrice = document.querySelector(".page1content .price");
-        const modalDesc = document.querySelector(".page1content .description");
-        const addToCartBtn = document.querySelector(".btncart");
-        
-        // Open modal
-        container.addEventListener("click", (e) => {
-          if (e.target.closest(".addicon")) {
-            let index = e.target.closest(".addicon").dataset.index;
-            let product = data.products[index];
-
-            modalImg.src = product.img_url;
-            modalName.textContent = product.name;
-            modalPrice.textContent = "Rs. " + product.price;
-            modalDesc.textContent = product.description;
-
-            modal.style.display = "block";
-          }
-        }); 
-        
-        closeBtn.addEventListener("click", () => {
-          modal.style.display = "none";
-        });
-
-        addToCartBtn.addEventListener("click", () => {
-          modal.style.display = "none";
-        });
-      })
-      .catch(error => console.error("Error loading products:", error));
   </script>
 </body>
+
 </html>
