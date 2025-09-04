@@ -12,7 +12,7 @@ fetch("products.json")
       productBox.innerHTML = `
         <img class="imgboximg" src="${product.img_url}" alt="${product.name}">
         <button class="addicon" data-index="${index}">
-            <img src="/images/Addicon.svg" alt="" style="width: 20px; height: 15px;">
+            <img src="/images/Addicon.svg" alt="">
         </button>
       `;
       container.appendChild(productBox);
