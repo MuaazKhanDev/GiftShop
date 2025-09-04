@@ -54,9 +54,6 @@ fetch("products.json")
   .catch(error => console.error("Error loading products:", error));
 
 
-// ============================
-// Hamburger dropdown toggle
-// ============================
 const hamburger = document.querySelector(".hamburger");
 const mobileDropdown = document.querySelector(".mobile-dropdown");
 const hamburgerIcon = document.querySelector(".hamburger img:first-child"); // first img = hamburger
