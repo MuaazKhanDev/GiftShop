@@ -1,10 +1,8 @@
-// Fetch products and render
 fetch("products.json")
   .then(response => response.json())
   .then(data => {
     const container = document.getElementById("product-list");
 
-    // Render products
     data.products.forEach((product, index) => {
       let productBox = document.createElement("div");
       productBox.classList.add("imgbox");
@@ -26,7 +24,6 @@ fetch("products.json")
     const modalDesc = document.querySelector(".page1content .description");
     const addToCartBtn = document.querySelector(".btncart");
 
-    // Open modal
     container.addEventListener("click", (e) => {
       if (e.target.closest(".addicon")) {
         let index = e.target.closest(".addicon").dataset.index;
@@ -41,12 +38,10 @@ fetch("products.json")
       }
     });
 
-    // Close modal
     closeBtn.addEventListener("click", () => {
       modal.style.display = "none";
     });
 
-    // Add to cart closes modal
     addToCartBtn.addEventListener("click", () => {
       modal.style.display = "none";
     });
